@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.com.shxt.po">
+	<class name="Student" table="STUDENT">
+		<id name="id">
+			<column name="ID"></column>
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" column="S_NAME"></property>
+		<property name="address" column="S_ADDRESS"></property>
+		<property name="photo" column="S_PHOTO"></property>
+		<property name="password" column="S_PASSWORD"></property>
+		<property name="birthday" column="S_BIRTHDAY"></property>
+		
+		<many-to-one name="stuType" column="STUTYPE_ID"></many-to-one>
+		
+		<set name="hobbies" table="R_STUDENT_HOBBY">
+			<key column="STUDENT_ID"></key>
+			<many-to-many column="HOBBY_ID" class="Hobby"></many-to-many>
+		</set>
+	</class>
+	
+</hibernate-mapping>

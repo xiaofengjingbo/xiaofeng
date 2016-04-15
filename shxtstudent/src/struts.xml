@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "struts-2.1.dtd" >
+<struts>
+	<package name="shxt" extends="struts-default">
+		<global-results>
+			<!-- action转发到jsp -->
+			<result name="success">/${url}</result>
+			<!-- action重定向到action -->
+			<result name="redirectAction" type="redirectAction">/${url}</result>
+			<!-- action重定向到jsp -->
+			<result name="redirect" type="redirect">/${url}</result>
+		</global-results>
+	</package>
+	
+	<include file="cn/com/shxt/modual/*/conf/struts-*.xml"></include>
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="shxtstudent"
+  id="myeclipse.1437559416156"
+  context-root="/struts2"
+  j2ee-spec="5.0"
+  archive="shxtstudent.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

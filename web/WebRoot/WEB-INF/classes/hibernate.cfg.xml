@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+<session-factory>
+	<!-- 配置开始 -->
+	<!-- 数据库方言 -->
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+	<!-- 配置驱动类 -->
+	<property name="hibernate.connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<!-- 配置用户名 -->
+	<property name="hibernate.connection.username">root</property>
+	<!-- 配置密码 -->
+	<property name="hibernate.connection.password">mysql</property>
+	<!-- 连接路径 -->
+	<!-- 解决hibernate的数据库乱码问题 -->
+	<property name="hibernate.connection.url">
+		jdbc:mysql://127.0.0.1:3308/hibernate_hql?useUnicode=true&amp;characterEncoding=UTF-8
+	</property>
+
+
+	<!-- hibernate的一些简单配置信息 -->
+	<property name="hibernate.show_sql">true</property>
+	<property name="hibernate.format_sql">true</property>
+	<!-- 通过映射文件生成数据脚本 -->
+	<property name="hibernate.hbm2ddl.auto">update</property>
+	<property name="hibernate.cache.use_query_cache">false</property>
+	<property name="javax.persistence.validation.mode">none</property>
+	
+	<!-- 引入映射文件 -->
+	<mapping class="com.shxt.framwork.rbac.menu.model.Menu" />
+	<mapping class="com.shxt.framwork.rbac.role.model.Role" />
+	<mapping class="com.shxt.framwork.rbac.user.model.User" />
+
+
+
+
+
+</session-factory>
+</hibernate-configuration>
